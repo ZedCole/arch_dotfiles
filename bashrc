@@ -5,7 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# Load Alias Commands
+if [[ -e $HOME/.bash_aliases ]]; then
+        source $HOME/.bash_aliases
+fi
+
+# Load Function Commands
+if [[ -e $HOME/.bash_functions ]]; then
+        source $HOME/.bash_functions
+fi
 
 ####
 # Bash Promt
