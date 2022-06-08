@@ -20,6 +20,7 @@ alias lla='ls -lha'
 
 # Go up one directory
 alias cd.='cd ..'
+alias cl.='cl ..'
 
 # List Sorted by File Size
 alias lt='ls --human-readable --size -1 -S --classify'
