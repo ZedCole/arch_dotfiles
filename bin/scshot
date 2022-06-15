@@ -1,0 +1,33 @@
+#!/bin/bash
+
+save_location=$HOME/Screenshots/
+file_name=$(date +%s'.png')
+
+file_save=$save_location$file_name
+
+function cap_area {
+        grim -g "$(slurp)" $file_save
+}
+
+function cap_current_desktop {
+        grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $file_save
+}
+
+function cap_current_window {
+        swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | if (.focused) then select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" else (.floating_nodes? // empty)[] | select(.visible) | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" end' | grim -g - $file_save
+}
+
+function cap_all {
+        grim $file_save
+}
+
+while getopts acwf flag
+do
+        case "${flag}" in
+                a) $(cap_area);;
+                c) $(cap_current_desktop);;
+                w) $(cap_current_window);;
+                f) $(cap_all);;
+        esac
+done
+

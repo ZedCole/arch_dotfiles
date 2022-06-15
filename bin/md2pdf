@@ -1,0 +1,14 @@
+#!/bin/bash
+
+file="$1"
+md_file=$file
+pdf_file=$(basename $file .md).pdf
+
+if [[ ! -d "pdfs" ]]
+then
+        echo "pdfs/ does not exist, creating directory!"
+        mkdir pdfs
+fi
+
+
+pandoc -t pdf $md_file -o pdfs/$pdf_file
