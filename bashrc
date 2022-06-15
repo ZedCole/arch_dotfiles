@@ -65,4 +65,12 @@ _set_prompt () {
 
 PROMPT_COMMAND=_set_prompt
 
+####
+# Ruby Gems
+####
+
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+
 export PATH="$HOME/dots/bin:$PATH"
+
