@@ -1,0 +1,76 @@
+/* Remove Default Styles */
+
+* {
+        border: none;
+        border-radius: 0;
+        font-family: "TerminessTTF Nerd Font";
+        font-size: 13px;
+        min-height: 0;
+        margin: 0 3px;
+}
+
+
+/* Waybar Window Style */
+
+window#waybar {
+        background: none;
+        color: white;
+}
+
+
+/* Left Modules */
+
+#clock {
+        background-color: #cc66ff;
+        padding: 0 5px;
+        border-radius: 10px;
+}
+        
+
+#custom-media {
+        background-color: #cc66ff;
+        min-width: 100px;
+        padding: 0 5px;
+        border-radius: 10px;
+}
+
+#custom-media.custom-spotify {
+        background-color: #66cc99;
+        color: #2a5c45;
+}
+
+#custom-media.custom-firefox {
+        background-color: #ff0000;
+        color: white;
+}
+
+
+/* Center Modules */
+
+#workspaces button {
+        color: white;
+        padding: 0 5px;
+        border-radius: 10px;
+}
+
+#workspaces button.focused {
+        background: #cc00cc;
+        border-bottom: 2px solid orange;
+}
+
+
+/* Right Modules */
+
+.modules-right {
+        background-color: #cc66ff;
+        border-radius: 10px;
+        padding-right: 0;
+}
+
+#custom-power {
+        background-color: red;
+        border-radius: 10px;
+        padding: 0 7px;
+        padding-left: 2px;
+        margin-right: 0;
+}
