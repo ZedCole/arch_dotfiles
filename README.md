@@ -1,6 +1,6 @@
 # My Arch Dotfiles
 
-![neofetch](https://imgur.com/K1JJabk)
+![neofetch](https://i.imgur.com/K1JJabk.png)
 
 Bit of a work in progress but getting there slowly.
 
