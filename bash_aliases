@@ -61,6 +61,15 @@ alias ve='python3 -m venv ./venv'
 alias va='source ./venv/bin/activate'
 
 ###
+# Development
+###
+
+## Jekyll
+
+# Start Github Pages Jekyll Locally
+alias gh_start="bundle exec jekyll serve"
+
+###
 # Misc
 ###
 
