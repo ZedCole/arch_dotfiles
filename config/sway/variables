@@ -1,0 +1,38 @@
+##
+# Sway Variables
+##
+
+# Set Modifier Keys
+
+set $key-alt Mod1
+set $key-super Mod4
+set $mod $key-super
+
+# Vim Directional Keys
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Set Terminal
+
+set $term alacritty
+
+# Set App Launcher
+
+set $menu wofi --show=run | swaymsg exec --
+
+# Set Screen Lock
+
+set $lock swaylock -f
+
+# Workspaces
+
+set $workspace_media 1:media
+set $workspace_main 2:main
+set $workspace_web 3:web
+set $workspace_term 4:term
+set $workspace_code 5:code
+set $workspace_notes 6:notes
+set $workspace_chat 7:chat

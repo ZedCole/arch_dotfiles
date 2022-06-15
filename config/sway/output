@@ -1,0 +1,32 @@
+##
+# Sway Output Configuration
+##
+
+# Set monitor names
+
+set $mon_center DP-2
+set $mon_left HDMI-A-1
+set $mon_right HDMI-A-2
+
+# Set monitor layot
+
+output $mon_left pos 0 0 res 1920x1080
+output $mon_center pos 1920 0 res 2560x1440@165.002Hz
+output $mon_right pos 4480 0 res 1920x1080
+
+# rotate right output
+output $mon_right transform "90"
+
+# Assign workspaces
+
+workspace $workspace_main output $mon_center
+workspace $workspace_media output $mon_left
+workspace $workspace_web output $mon_right
+
+# Set wallpaper
+
+# Set to temp wallpaper
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+# Set Wallpaper in dots/wallpapers/
+output * bg ~/dots/wallpapers/current.jpg fill

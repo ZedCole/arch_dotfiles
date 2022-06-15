@@ -1,0 +1,7 @@
+##
+# Sway Run Bar
+##
+
+bar {
+        swaybar_command waybar
+}

@@ -1,0 +1,20 @@
+##
+# Sway Config Files
+##
+
+include ./variables
+include ./output
+include ./idle
+include ./key-binds
+include ./bar
+include ./style
+
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec XDG_CURRENT_DESKTOP=sway
+
+# Set num lock
+input * xkb_numlock enable
+
+# Default Settings for other
+
+include /etc/sway/config.d/*

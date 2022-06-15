@@ -1,0 +1,191 @@
+##
+# Key Binds
+##
+
+
+## Doing Stuff
+
+# Start Term
+
+bindsym $mod+Return exec $term
+
+# Kill Window
+
+bindsym $mod+Shift+q kill
+
+# Open App Launcher
+
+bindsym $mod+d exec $menu
+
+# Resize Windows
+
+floating_modifier $mod normal
+
+# Reload Config
+
+bindsym $mod+Shift+c reload
+
+# Exit Sway
+
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Leaving so soon?' -b 'See Ya!' 'swaymsg exit'
+
+
+## Moving Stuff
+
+# Move Focus
+
+# Vim Keys
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+# Arrow Keys
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move Focused Window
+
+# Vim Keys
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+# Arrow Keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Move Focus to Parent/Child
+
+bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
+
+
+## Workspaces
+
+# Switch Workspace
+
+bindsym $mod+1 workspace $workspace_media
+bindsym $mod+2 workspace $workspace_main
+bindsym $mod+3 workspace $workspace_web
+bindsym $mod+4 workspace $workspace_term
+bindsym $mod+5 workspace $workspace_code
+bindsym $mod+6 workspace $workspace_notes
+bindsym $mod+7 workspace $workspace_chat
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# Move Focused Window to Workspace
+
+bindsym $mod+Shift+1 move container to workspace $workspace_media
+bindsym $mod+Shift+2 move container to workspace $workspace_main
+bindsym $mod+Shift+3 move container to workspace $workspace_web
+bindsym $mod+Shift+4 move container to workspace $workspace_term
+bindsym $mod+Shift+5 move container to workspace $workspace_code
+bindsym $mod+Shift+6 move container to workspace $workspace_notes
+bindsym $mod+Shift+7 move container to workspace $workspace_chat
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+
+## Layout
+
+# Split
+
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Switch Layout Style
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Fullscreen current window
+
+bindsym $mod+f fullscreen
+
+# Toggle Focus Floating/Tiling
+
+bindsym $mod+Shift+space floating toggle
+
+# Toggle Between Floating/Tiling Containers
+
+bindsym $mod+space focus mode_toggle
+
+
+## Scratchpad
+
+# Move Focus to Scratchpad
+
+bindsym $mod+Shift+minus move scratchpad
+
+# Cycle through Scratchpad
+
+bindsym $mod+minus scratchpad show
+
+
+## Resizing
+
+mode "resize" {
+        # Vim Keys
+        bindsym $left resize shrink width 10px
+        bindsym $down resize shrink height 10px
+        bindsym $up resize grow height 10px
+        bindsym $right resize grow width 10px
+        # Arrow Keys
+        bindsym Left resize shrink width 10px
+        bindsym Down resize shrink height 10px
+        bindsym Up resize grow height 10px
+        bindsym Right resize grow width 10px
+
+        # Exit Resize Mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Enter Resize Mode
+
+bindsym $mod+r mode "resize"
+
+
+## Custom Keybinds
+
+# Lock Computer
+
+bindsym $mod+Shift+Escape exec $lock
+
+# Toggle Borders
+
+bindsym $mod+p border toggle
+
+# Screen Shot Area
+bindsym $mod+Page_down exec scshot -a
+
+# Screen Shot Active Desktop
+bindsym $mod+Shift+Page_down exec scshot -c
+
+# Screen Shot Active Window
+bindsym $mod+Control+Page_down exec scshot -w
+
+# Screen Shot All Windows
+bindsym $mod+Control+Shift+Page_down exec scshot -f
+
+
+## Media Keys
+# Install wev to find keys for wayland
+
+# Media Control
+bindsym XF86AudioPlay exec --no-startup-id "playerctl play-pause"
+bindsym XF86AudioNext exec --no-startup-id "playerctl next"
+bindsym XF86AudioPrev exec --no-startup-id "playerctl previous"
+
+# Volume Control
+bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -5%"

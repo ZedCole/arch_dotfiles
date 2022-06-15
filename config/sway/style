@@ -1,0 +1,19 @@
+gaps inner 5
+default_border pixel 2
+
+## Colour Scheme?
+
+# Colours
+
+set $col_dark_purp #9900cc
+set $col_light_purp #cc00cc
+set $col_dark_green #33cc33
+set $col_black #000000
+set $col_white #ffffff
+set $col_orange #ff9900
+
+# class                     border          background      text        indicator           child_border
+client.focused              $col_dark_green $col_dark_green $col_black  $col_dark_green    $col_dark_green
+client.focused_inactive     $col_dark_purp  $col_dark_purp  $col_black  $col_dark_purp      $col_dark_purp
+client.unfocused            $col_dark_purp  $col_dark_purp  $col_black  $col_dark_purp      $col_dark_purp
+client.urgent               $col_orange     $col_orange     $col_black  $col_orange         $col_orange
