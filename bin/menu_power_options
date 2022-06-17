@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while getopts 1234 flag
+do
+        case "$flag" in
+                1)
+                        exec swaynag - t warning -m "Leaving so soon?" -b 'See Ya!' 'swaymsg exit';;
+                2)
+                        exec systemctl suspend;;
+                3)
+                        exec systemctl reboot;;
+                4)
+                        exec systemctl poweroff -i;;
+        esac
+done
