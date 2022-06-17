@@ -4,12 +4,21 @@ from tkinter import *
 from tkinter import ttk
 import subprocess
 
-# Power options to include
-# Exit Sway, Suspend, Reboot, Shutdown
+#
+# Custom Power Menu for SwayWM
+#
+# Can be run from wofi or power button in waybar
+#
+# Todo:
+# - Set Window size by default
+# - Use icons/images for buttons
+# - Animations
+# - Better Keyboard controll
+#
 
-def options(comm):
-    arg = comm
-    if 1 <= arg <= 4:
+def options(opt):
+    arg = opt
+    if 1 <= arg <= 4: # 1 - Exit Sway, 2 - Suspend, 3 - Reboot, 4 - Shutdown
         subprocess.call(['menu_power_options',"-"+str(arg)])
 
 def close_window(event):
@@ -19,10 +28,15 @@ def close_window(event):
 root = Tk()
 frm = ttk.Frame(root, padding=10)
 frm.grid()
+
+# Buttons
 ttk.Button(frm, text="Exit Sway", command=lambda: options(1)).grid(column=0, row=0)
 ttk.Button(frm, text="Suspend", command=lambda: options(2)).grid(column=1, row=0)
 ttk.Button(frm, text="Reboot", command=lambda: options(3)).grid(column=2, row=0)
 ttk.Button(frm, text="Shutdown", command=lambda: options(4)).grid(column=3, row=0)
+
+# Set title so Sway can float the window
 frm.master.title("Power Menu")
+
 root.bind("<KeyRelease>", close_window)
 root.mainloop()
