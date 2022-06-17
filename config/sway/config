@@ -15,6 +15,9 @@ exec XDG_CURRENT_DESKTOP=sway
 # Set num lock
 input * xkb_numlock enable
 
+# Power Menu Test
+for_window [title="Power Menu"] floating enable
+
 # Default Settings for other
 
 include /etc/sway/config.d/*
