@@ -98,6 +98,6 @@
         "custom/power": {
                 "tooltip": false,
                 "format": "",
-                "on-click": "bash $HOME/dots/bin/power_sway.sh"
+                "on-click": "python3 $HOME/dots/bin/sway_power_menu"
         }
 }
