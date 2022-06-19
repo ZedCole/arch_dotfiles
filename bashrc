@@ -72,5 +72,16 @@ PROMPT_COMMAND=_set_prompt
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
+# Custom Scripts
+
 export PATH="$HOME/dots/bin:$PATH"
 
+# Pip
+
+export PATH="$HOME/.local/bin:$PATH"
+
+####
+# Variables
+####
+
+export EDITOR=nvim
