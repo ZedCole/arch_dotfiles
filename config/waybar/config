@@ -79,7 +79,7 @@
         "custom/pacman": {
                 "format": " {}",
                 "interval": 3600,
-                "exec": "pacman -Qu | wc -l",
+                "exec": "pac_count",
                 "exec-if": "exit 0",
                 "signal": 8
         },
