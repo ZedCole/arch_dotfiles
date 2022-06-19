@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pac_check &>/dev/null &
+
+pacman -Qu | wc -l
