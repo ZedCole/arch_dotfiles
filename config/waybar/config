@@ -77,11 +77,11 @@
         },
 
         "custom/pacman": {
-                "format": " {}",
+                "format": "{}",
+                "return-type": "json",
                 "interval": 3600,
+                "tooltip" : true,
                 "exec": "pac_count",
-                "exec-if": "exit 0",
-                "signal": 8
         },
 
         "cpu": {
