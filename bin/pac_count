@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Update pacman databases
-pac_check &>/dev/null &
-
 output="$(pacman -Qu)"
 number="$(echo "$output" | wc -l)"
 text=" $number"
