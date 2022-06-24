@@ -1,7 +1,7 @@
 #!/bin/bash
 
 output="$(pacman -Qu)"
-number="$(echo "$output" | wc -l)"
+number="$(pacman -Qu | wc -l)"
 text=" $number"
 
 if (( $number > 20 ))
