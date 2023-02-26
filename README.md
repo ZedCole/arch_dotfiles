@@ -15,3 +15,5 @@ Bit of a work in progress but getting there slowly.
 - [ ] Make a wallpaper collection on imgur and auto downloader
 - [ ] Build a startpage
 - [x] Custom power menu
+
+SSH test commit
